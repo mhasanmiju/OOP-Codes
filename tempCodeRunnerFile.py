@@ -1,11 +1,17 @@
-class Student:
-    def __init__(self, name, id):
-        self.name = name
-        self.id = id
-        print("A new object created")
-    def details(self):
-       print(f"Student name: {self.name} and ID: {self.id}")     
+class Cat:
+    def __init__(self, color, action):
+        self.color = color
+        self.action = action
+    def View(self):
+        print(f"{self.color} Cat is {self.action}.")
 
-S1 = Student("Miju", "027")
-S2 = Student("Riju", "028")
-S2.details()
+    def compare (self, ct):
+        if self.action == ct.action:
+            print(f"Both cats are {self.action}")
+        else:
+            print(f"{self.color} is {self.action} and\n{ct.color} is {ct.action}")
+
+c1= Cat("White", "Running")
+c2 = Cat("Brown", "Running")
+c1.View()
+c1.compare(c2)
